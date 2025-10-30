@@ -1,4 +1,4 @@
-export default function NavigationBar({onOpen}) {
+export default function NavigationBar({onOpen}) { // onOpen is a function prop to open the modal
   return (
     <>
 <div className="navbar bg-base-100 shadow-sm">
@@ -20,7 +20,7 @@ export default function NavigationBar({onOpen}) {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li>
+        <li> 
           <a className="btn btn-secondary">
             Profile
           </a>

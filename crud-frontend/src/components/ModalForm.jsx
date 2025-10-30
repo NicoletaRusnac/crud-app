@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react' // React import
 
+// Modal form component for adding/editing client details
 export default function ModalForm({isOpen, onClose, mode, OnSummit}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -7,15 +8,17 @@ export default function ModalForm({isOpen, onClose, mode, OnSummit}) {
   const [status, setStatus] = useState(false);
   const [rate, setRate] = useState("");
 
+  // Handle status change between Active and Inactive
   const handeStatusChange = (e) => {
     setStatus(e.target.value === "Active" );
   }
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     onclose(e);
   }
-
+// Render the modal form
   return (
     <>
     <dialog id="my_modal_3" className="modal" open ={isOpen}>
